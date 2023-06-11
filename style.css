@@ -1,0 +1,37 @@
+.first-section {
+    display: flex;
+    padding: 10px;
+    max-height: 600px;
+    align-items:center;
+}
+.first-section img {
+    border-radius: 50%;
+    max-height: 300px;
+    max-width: 220px;
+    flex-basis: 25%;
+}
+.first-section .inner-first {
+    border-style: dashed;
+    text-align: center;
+    margin-left: 30px;
+    flex-basis: 75%;
+}
+
+.first-section .inner-first h1{
+    font-size: 20px;
+    
+}
+.first-section .inner-first p{
+    font-size: 17px;
+}
+.first-section .inner-first:hover {
+    color: red;
+}
+
+.icons img {
+    border-style: none;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 20px;
+}
