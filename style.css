@@ -1,37 +1,114 @@
-.first-section {
-    display: flex;
-    padding: 10px;
-    max-height: 600px;
-    align-items:center;
-}
-.first-section img {
-    border-radius: 50%;
-    max-height: 300px;
-    max-width: 220px;
-    flex-basis: 25%;
-}
-.first-section .inner-first {
-    border-style: dashed;
-    text-align: center;
-    margin-left: 30px;
-    flex-basis: 75%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.first-section .inner-first h1{
-    font-size: 20px;
-    
+body {
+    background: rgba(5, 139, 135, 0.978);
+    color: #ededed;
 }
-.first-section .inner-first p{
-    font-size: 17px;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: rgba(5, 139, 135, 0.978);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
-.first-section .inner-first:hover {
-    color: red;
+
+.my-name {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ededed;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ededed;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: rgba(43, 238, 232, 0.978);
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.profile-img {
+    position: inline-flex;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.profile-img img {
+    height: 250px;
+    border-radius: 50%;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgba(240, 245, 245, 0.629);
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    line-height: 30px;
+}
+
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    width: 180px;
+}
+
+.icons a {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
 }
 
 .icons img {
-    border-style: none;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    margin-left: 5px;
-    margin-right: 5px;
-    max-width: 20px;
+}
+
+.icons .cf-icon {
+    border-radius: 0%;
 }
