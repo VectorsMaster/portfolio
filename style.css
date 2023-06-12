@@ -83,6 +83,18 @@ body {
     line-height: 30px;
 }
 
+.home-content h5 {
+    font-size: 32px;
+}
+
+.languages {
+    margin: 13px;
+}
+
+.languages p {
+    line-height: 5px;
+    font-weight: 600;
+}
 
 .icons {
     display: flex;
