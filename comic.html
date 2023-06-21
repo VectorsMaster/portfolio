@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="/index.html" class="my-name">Ahmad Sarhan</a>
+        <a href="/comic.html" class="get-a-joke">Get another joke!</a>
+        <nav class="navbar">
+            <a href="/index.html#home-section" class="active">Home</a>
+            <a href="/index.html#contact-section" class="active">Contacts</a>
+        </nav>
+    </header>
+
+    <section id="my-joke" class="joke">
+        <h2 id="joke-title">Joke title</h2>
+        <p id="upload-date"></p>
+        <img id="joke-image" src="." alt="joke-image">
+    </section>
+
+    <script>
+        async function main() {
+            const title = document.getElementById('joke-title')
+            const img = document.getElementById('joke-image')
+            const date = document.getElementById('upload-date')
+            async function fetchId() {
+                const params = new URLSearchParams();
+                params.append('email', 'a.sarhan@innopolis.university')
+                return fetch('https://fwd.innopolis.university/api/hw2?' + params.toString()).then(r => r.json());
+            }
+
+            async function fetchJoke() {
+                joke_id = await fetchId()
+                console.log(joke_id)
+                const params = new URLSearchParams();
+                params.append('id', joke_id)
+                return fetch('https://fwd.innopolis.university/api/comic?' + params.toString()).then(r => r.json());
+            }
+
+            joke = await fetchJoke();
+            title.textContent = joke.safe_title;
+            img.src = joke.img;
+            img.alt = joke.alt;
+            console.log(img.alt)
+
+            const event = new Date(Date.UTC(joke.year, joke.month, joke.day));
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            date.textContent = event.toLocaleDateString('en-EN', options);
+        }
+        main()
+    </script>
+</body>
+
+</html>

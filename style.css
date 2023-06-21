@@ -30,6 +30,20 @@ body {
 
 }
 
+.get-a-joke {
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: 600;
+    color: #ededed;
+    transition: .3s;
+    font-family: 'Brush Script MT', cursive;
+
+}
+
+.get-a-joke:hover {
+    color: rgba(43, 238, 232, 0.978);
+}
+
 .navbar a {
     text-decoration: none;
     font-size: 18px;
@@ -39,9 +53,32 @@ body {
     transition: .3s;
 }
 
-.navbar a:hover,
-.navbar a.active {
+.navbar a:hover {
     color: rgba(43, 238, 232, 0.978);
+}
+
+.joke {
+    padding: 0 10%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.joke p {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: rgba(43, 238, 232, 0.978);
+}
+
+.joke img {
+    min-width: 40vh;
+    min-height: 40vh;
+    max-width: 100vh;
+    font-size: 20px;
+
+    text-align: center;
 }
 
 .home {
