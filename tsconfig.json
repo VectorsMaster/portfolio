@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "outDir": "dist",
+      "lib": ["ES2015","DOM", "ESNEXT"],  
+      "typeRoots": ["node.modules/@types/"],
+    },
+    "include": [
+      "src/**/*.ts"
+    ]
+  }
+  
